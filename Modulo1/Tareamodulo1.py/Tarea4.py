@@ -5,26 +5,10 @@
 print("ingrese sus datos")
 nombre=input("ingrese su nombre: ")
 edad=int(input("ingrese su edad: "))
-RUC=int(input("ingrese su RUC: "))
-Nombre_comercial=("ingrese su nombre comercial: ")
+RUC=input("¿Tiene RUC? (si/no): ").lower() == "si"
+nombre_comercial=input("¿Tiene nombre comercial? (si/no): ").lower() == "si"
 
-if ((edad>=18) and (RUC)
-    salario=float(salario)
-    if salario<10000:
-        tasa=0
-    elif salario<18000:
-        tasa=5
-    elif salario<25000:
-        tasa=10
-    else:
-        tasa=25
-
-    
-    impuesto=salario*(tasa/100)
-    correo=input("ingrese su correo: ")
-    msg=f"su impuesto sera {impuesto} le enviaremos a su correo, Gracias"
-    print(msg)
-
+if edad>=18 and RUC and nombre_comercial:
+    print ("Estas apto para abrir un negocio")
 else:
-    msgError=f"hola {nombre}, usted no califica"
-    print(msgError)
+    print("No cumples con todas las condiciones para abrir un negocio")
